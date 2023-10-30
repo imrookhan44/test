@@ -25,7 +25,7 @@ contract Hallowin is
 
   string public uriPrefix = '';
   string public uriSuffix = '.json';
-  string public hiddenUri = 'ipfs://bafybeigkyaxuc4acox7r5taxdhahyma5nduekhkt23bwjn47zgjj5vufga/hidden.json';
+  string public hiddenUri = 'ipfs://bafybeib6igv7ovccebuvxe3odrixjimy3rpldu6ytbp2yrxznyjdjrc4we';
   
   uint256 public price = 0.003 ether;
   uint256 public maxSupply = 1999; 
@@ -115,6 +115,10 @@ contract Hallowin is
 
   function setUriSuffix(string memory _uriSuffix) public onlyOwner {
     uriSuffix = _uriSuffix;
+  }
+
+  function setHiddenUri(string memory _uriHidden) public onlyOwner {
+    hiddenUri = _uriHidden;
   }
 
   function setMerkleRoot(bytes32 _merkleRoot) public onlyOwner {

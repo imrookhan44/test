@@ -337,7 +337,6 @@ useEffect(() => {
               <h2 className="text-white text-2xl md:text-4xl uppercase">
               Unleash Halloween's Magic
               </h2>
-
               <p className="text-white mt-7 text-lg uppercase">
                 {`
                   Hallowin is a hauntingly innovative NFT project celebrating Halloween through pixelated skulls. 
@@ -351,8 +350,7 @@ useEffect(() => {
               
               <p className="text-white text-lg uppercase">
                 {`
-                Discover the thrill of owning exclusive, limited-edition pixel art that's both eerie and enchanting. 
-                  
+                Discover the thrill of owning exclusive, limited-edition pixel art that's both eerie and enchanting.  
                  `}
               </p>
               <p className="text-white text-lg uppercase">
