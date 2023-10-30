@@ -120,8 +120,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="min-h-screen h-full w-full flex flex-col bg-cover bg-gradient-to-r
-    from-gray-600 to-indigo-400 overflow-hidden">
+    <div className="min-h-screen h-full w-full flex flex-col bg-cover bg-black overflow-hidden">
     <Head>
       <title>{config.title}</title>
       <meta name="description" content={config.description} />
@@ -147,43 +146,20 @@ useEffect(() => {
 
      {/* Twitter */}
      <li className="transform cursor-pointer hover:scale-125 transition duration-500">
-      <a href="https://twitter.com/MasterGatorz" 
+      <a href="https://twitter.com/Hallowinft" 
       target="_blank" rel="noreferrer">
       <img className="w-8 h-8"
-              src="/media/twttr.png">             
+              src="/media/twttr.webp">             
           </img>   
       </a>
       </li>
-
-{/* Discord */}
-<li className="transform cursor-pointer hover:scale-125 transition duration-500">
-      <a href="https://discord.com/invite/mastergatorz" 
-      target="_blank" rel="noreferrer">
-      <img className="w-8 h-8"
-              src="/media/dc.png">             
-          </img>   
-      </a>
-      </li>
-
-            {/* Opensea */}
-    <li className="transform cursor-pointer hover:scale-125 transition duration-500">
-      <a
-        href="https://opensea.io/collection/mastergatorzofficial"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img className="w-8 h-8"
-              src="/media/os.png">             
-          </img>   
-      </a>
-    </li>
           </ul>
         </nav>
       </div>        
     </header>
     </div>
 
-    <div className="min-h-screen h-full w-full overflow-hidden flex flex-col items-center justify-center bg-brand-background ">
+    <div className="min-h-screen h-full w-full overflow-hidden flex flex-col items-center justify-center bg-black ">
       <div className="relative w-full h-full flex flex-col items-center justify-center">
         <img
           src="/media/bg.png"
@@ -191,10 +167,10 @@ useEffect(() => {
         />
 
         <div className="flex flex-col items-center justify-center h-full w-full px-2 md:px-10">
-          <div className="relative z-1 md:max-w-3xl w-full bg-green-800 filter border border-purple-200 
+          <div className="relative z-1 md:max-w-3xl w-full bg-slate-600 filter border-8 border-purple-600 
                       backdrop-blur-sm py-4 rounded-md px-2 md:px-10 flex flex-col items-center">
             <h1 className="uppercase font-bold text-white text-3xl mt-3">
-            {paused ? 'Paused' : isPreSale ? 'Whitelist-Sale' : 'Public Sale'}
+            {paused ? 'Paused' : isPreSale ? 'Whitelist-Sale' : 'Coming soon'}
           </h1>
 
           {/* Wallet Address Display */}
@@ -209,7 +185,8 @@ useEffect(() => {
 
             <div className="flex flex-col md:flex-row md:space-x-14 w-full mt-10 md:mt-14">
               <div className="relative w-full">
-                <div className="font-coiny z-10 absolute top-2 left-2 opacity-80 filter backdrop-blur-lg text-base px-4 py-2 bg-black border border-brand-purple rounded-md flex items-center justify-center text-white font-semibold">
+                <div className="font-coiny z-10 absolute top-2 left-2 opacity-80 filter backdrop-blur-lg text-base px-4 
+                py-2 bg-black border border-purple-600 rounded-md flex items-center justify-center text-white font-semibold">
                   <p>
                     <span className="text-pink-400">{totalMinted}</span> /{' '}
                     {maxSupply}
@@ -218,14 +195,15 @@ useEffect(() => {
 
                 <img
                   src="/media/pepe.gif"
-                  className="border-4 object-cover w-full sm:h-[280px] md:w-[250px] rounded-md"
+                  className="border-4 object-cover border-purple-600 w-full sm:h-[280px] md:w-[250px] rounded-md"
                 />
               </div>
 
-              <div className="flex flex-col items-center w-full px-4 mt-16">
+              <div className="flex flex-col items-center w-full px-4 mt-5">
                 <div className="font-coiny flex items-center justify-between w-full">
                   <button
-                    className="w-14 h-10 md:w-16 md:h-12 flex items-center justify-center text-brand-background hover:shadow-lg bg-gray-300 font-bold rounded-md"
+                    className="w-14 h-10 md:w-16 md:h-12 flex items-center justify-center border border-purple-600 
+                    text-brand-background hover:shadow-lg bg-gray-300 font-bold rounded-md"
                     onClick={decrementMintAmount}
                   >
                     <svg
@@ -249,7 +227,8 @@ useEffect(() => {
                   </p>
 
                   <button
-                    className="w-14 h-10 md:w-16 md:h-12 flex items-center justify-center text-brand-background hover:shadow-lg bg-gray-300 font-bold rounded-md"
+                    className="w-14 h-10 md:w-16 md:h-12 flex items-center justify-center border border-purple-600 
+                    text-brand-background hover:shadow-lg bg-gray-300 font-bold rounded-md"
                     onClick={incrementMintAmount}
                   >
                     <svg
@@ -269,6 +248,10 @@ useEffect(() => {
                   </button>
                 </div>
 
+                <p className="text-white text-center tracking-widest mt-7">
+                1st Candie is Free, 2nd and 3rd need an offering
+                </p>
+
                 <p className="text-white tracking-widest mt-7">
                   Max Mint Amount: {maxMintAmount}
                 </p>
@@ -279,8 +262,8 @@ useEffect(() => {
               className={`${
                 paused || isMinting || preview
                   ? 'bg-gray-900 cursor-not-allowed mt-10'
-                  : 'bg-gradient-to-br from-cyan-400 to-green-400 shadow-lg hover:shadow-blue-400/50'
-              } border border-purple-400 mt-5  items-center px-3 py-3 
+                  : 'bg-gradient-to-br from-gray-600 to-indigo-400 shadow-lg hover:shadow-blue-400/50'
+                  } border border-purple-400 mt-5  items-center px-3 py-3 
                     flex bg-gradient-to-r justify-between shadow-lg 
                     text-2xl text-white hover:shadow-white transition duration-500 
                     tracking-wide uppercase mt-10`}
@@ -292,7 +275,7 @@ useEffect(() => {
                   ? 'Minting...'
                   : 'Mint' +
                     '  ' +
-                    Number.parseFloat(config.price * mintAmount).toFixed(4) +
+                    Number.parseFloat((config.price * mintAmount) - config.price).toFixed(4) +
                     ' ' +
                     'ETH + GAS'}
               </p>
@@ -330,7 +313,7 @@ useEffect(() => {
             )}
 
             {/* Contract Address */}
-            <div className="border-t border-gray-800 flex flex-col items-center mt-10 py-2 w-full">
+            <div className="border-t border-purple-600 flex flex-col items-center mt-10 py-2 w-full">
               <h3 className="font-coiny text-2xl text-white uppercase mt-6">
                 Contract Address
               </h3>
@@ -352,33 +335,41 @@ useEffect(() => {
             <div className="flex flex-col items-center justify-center text-center
              text-green-200">
               <h2 className="text-white text-2xl md:text-4xl uppercase">
-              Welcome to the The Swampz 
+              Unleash Halloween's Magic
               </h2>
-
               <p className="text-white mt-7 text-lg uppercase">
                 {`
-                  Home of the MasterGatorz, Featuring 2222 Unique and animated suspicious looking gatorz. 
+                  Hallowin is a hauntingly innovative NFT project celebrating Halloween through pixelated skulls. 
                  `}
               </p>
               <p className="text-white text-lg uppercase">
-                {`You never know what they'll be up to next. 
-                  
+                {`
+                  Dive into a world where PFP art meets the macabre, offering unique, spine-chilling NFT collectibles that capture the essence of All Hallows' Eve. 
+                 `}
+              </p>
+              
+              <p className="text-white text-lg uppercase">
+                {`
+                Discover the thrill of owning exclusive, limited-edition pixel art that's both eerie and enchanting.  
                  `}
               </p>
               <p className="text-white text-lg uppercase">
-                {`Great prizes, Access to royalties, 
-                and priceless Utility awaiting you Gatorz. 
+                {`
+                Join us in this digital realm, where Halloween's spirit is reimagined pixel by pixel.
+
+                 `}
+              </p>
+
+              <p className="text-white text-lg uppercase">
+                {`Unearth your cryptic companion with Hallowin! 
                  `}
               </p>
             </div>
           </div> 
     {/* Copyrights */}
     <div
-    className="w-full object-cover bg-cover bg-center bg-black 
+    className="w-full object-cover bg-cover bg-center 
      mx-auto px-4 py-6 pt-6 mt-10">
-    <h3 className="text-center text-white uppercase mt-2">
-      Copyrights © 2023 MasterGatorz
-    </h3>
   </div>
   </div>
 

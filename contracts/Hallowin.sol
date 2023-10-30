@@ -40,7 +40,7 @@ contract Hallowin is
   mapping(address => bool) public addressClaimed;
 
   constructor() 
-  ERC721A("Hallowin", "HLWN") Ownable(msg.sender){
+  ERC721A("Hallowin", "HLWN") {
     royaltyAddress = msg.sender;
   }
 
