@@ -135,7 +135,9 @@ useEffect(() => {
       <div className="flex items-center container mx-auto max-w-5xl justify-between h-full">
         {/* Logo */}
         <main >
-      
+      <img className="cursor-pointer w-30 h-20 "
+              src="/media/mg.png">             
+      </img>  
       </main>       
 
         {/* Official Links */}
@@ -146,7 +148,9 @@ useEffect(() => {
      <li className="transform cursor-pointer hover:scale-125 transition duration-500">
       <a href="https://twitter.com/Hallowinft" 
       target="_blank" rel="noreferrer">
-  
+      <img className="w-8 h-8"
+              src="/media/twttr.webp">             
+          </img>   
       </a>
       </li>
           </ul>
@@ -157,7 +161,10 @@ useEffect(() => {
 
     <div className="min-h-screen h-full w-full overflow-hidden flex flex-col items-center justify-center bg-black ">
       <div className="relative w-full h-full flex flex-col items-center justify-center">
-        
+        <img
+          src="/media/bg.png"
+          className="animate-pulse-slow absolute inset-auto block w-full min-h-screen object-cover"
+        />
 
         <div className="flex flex-col items-center justify-center h-full w-full px-2 md:px-10">
           <div className="relative z-1 md:max-w-3xl w-full bg-slate-600 filter border-8 border-purple-600 
@@ -186,7 +193,10 @@ useEffect(() => {
                   </p>
                 </div>
 
-               
+                <img
+                  src="/media/pepe.gif"
+                  className="border-4 object-cover border-purple-600 w-full sm:h-[280px] md:w-[250px] rounded-md"
+                />
               </div>
 
               <div className="flex flex-col items-center w-full px-4 mt-5">
@@ -283,7 +293,7 @@ useEffect(() => {
               <p className="mt-1 text-lg uppercase">
                 {'CONNECT WALLET' + '  '}
               </p>
-         
+              <img className="w-8 h-8" src="/media/metamask.gif"></img>
             </button>
           )}
               </div>
