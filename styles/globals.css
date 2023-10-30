@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text{
+  @apply text-white transform -translate-y-10 -translate-x-2 scale-75;
+}
+
+:root {
+    --font-family: 'VT323', monospace;
+    --clr-light: #f0e9e9;
+    --clr-purple: #9b5de5;
+    --clr-pink: #f15bb5;
+    --clr-yellow: #fee440;
+    --clr-blue: #00bbf9;
+    --clr-green: #00f5d4;
+    --clr-selection-bg: #cb3d92;
+    --clr-selection-text: #f4f0f0;
+    --clr-background: #092a3b;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+    background: var(--clr-background);
+  }
+  
+  ::selection {
+    background: var(--clr-selection-bg);
+    color: var(--clr-selection-text);
+  }
+  
